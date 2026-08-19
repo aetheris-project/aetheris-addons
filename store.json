@@ -27,6 +27,19 @@
       "license": "MIT",
       "description": "Global payments platform with 250+ local payment methods.",
       "state": "accepted"
+    },
+    {
+      "id": "gateway-braintree",
+      "name": "Braintree",
+      "category": "payment-gateway",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "MIT",
+      "description": "PayPal-owned gateway for cards, PayPal and venmo.",
+      "state": "accepted"
     }
   ]
 }
