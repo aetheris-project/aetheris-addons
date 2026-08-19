@@ -53,6 +53,19 @@
       "license": "MIT",
       "description": "Send billing, provisioning and alert messages to Slack channels.",
       "state": "accepted"
+    },
+    {
+      "id": "notify-telegram",
+      "name": "Telegram notifications",
+      "category": "notification",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "MIT",
+      "description": "Deliver platform alerts to a Telegram bot chat.",
+      "state": "accepted"
     }
   ]
 }
