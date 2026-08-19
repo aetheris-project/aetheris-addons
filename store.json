@@ -1,5 +1,19 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-08-19",
-  "addons": []
+  "addons": [
+    {
+      "id": "gateway-coinbase",
+      "name": "Coinbase Commerce",
+      "category": "payment-gateway",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "MIT",
+      "description": "Accept crypto payments (BTC, ETH, USDC) through Coinbase Commerce.",
+      "state": "accepted"
+    }
+  ]
 }
