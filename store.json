@@ -79,6 +79,19 @@
       "license": "MIT",
       "description": "Post embeds with server events and billing alerts to Discord webhooks.",
       "state": "accepted"
+    },
+    {
+      "id": "utility-webhook-logger",
+      "name": "Webhook logger",
+      "category": "utility",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "MIT",
+      "description": "Fan out platform events to arbitrary HTTP endpoints with retries.",
+      "state": "accepted"
     }
   ]
 }
