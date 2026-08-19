@@ -66,6 +66,19 @@
       "license": "MIT",
       "description": "Deliver platform alerts to a Telegram bot chat.",
       "state": "accepted"
+    },
+    {
+      "id": "notify-discord",
+      "name": "Discord notifications",
+      "category": "notification",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "MIT",
+      "description": "Post embeds with server events and billing alerts to Discord webhooks.",
+      "state": "accepted"
     }
   ]
 }
