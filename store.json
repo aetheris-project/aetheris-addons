@@ -40,6 +40,19 @@
       "license": "MIT",
       "description": "PayPal-owned gateway for cards, PayPal and venmo.",
       "state": "accepted"
+    },
+    {
+      "id": "notify-slack",
+      "name": "Slack notifications",
+      "category": "notification",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "MIT",
+      "description": "Send billing, provisioning and alert messages to Slack channels.",
+      "state": "accepted"
     }
   ]
 }

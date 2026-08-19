@@ -1,0 +1,15 @@
+{
+  "id": "notify-slack",
+  "name": "Slack notifications",
+  "category": "notification",
+  "version": "1.0.0",
+  "author": {
+    "name": "Leonardo Galli",
+    "github": "Leo-Galli"
+  },
+  "license": "MIT",
+  "entry": "src/index.ts",
+  "requires": [],
+  "description": "Send billing, provisioning and alert messages to Slack channels.",
+  "documentation": "README.md"
+}
