@@ -1,0 +1,15 @@
+{
+  "id": "utility-webhook-logger",
+  "name": "Webhook logger",
+  "category": "utility",
+  "version": "1.0.0",
+  "author": {
+    "name": "Leonardo Galli",
+    "github": "Leo-Galli"
+  },
+  "license": "MIT",
+  "entry": "src/index.ts",
+  "requires": [],
+  "description": "Fan out platform events to arbitrary HTTP endpoints with retries.",
+  "documentation": "README.md"
+}
