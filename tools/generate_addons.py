@@ -306,7 +306,7 @@ def manifest_for(spec: dict, pr: int) -> dict:
         "category": spec["category"],
         "version": "1.0.0",
         "author": AUTHOR,
-        "license": "MIT",
+        "license": "Aetheris License v1.0",
         "entry": "src/index.ts",
         "requires": ["billing"] if spec["category"] == "payment-gateway" else [],
         "description": spec["description"],

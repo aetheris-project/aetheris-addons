@@ -10,7 +10,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT">
+  <img src="https://img.shields.io/badge/license-Aetheris%20v1.0-10B981" alt="Aetheris License v1.0">
   <img src="https://img.shields.io/badge/status-live-10B981" alt="Live">
 </p>
 
@@ -94,5 +94,4 @@ catalog.
 
 ## License
 
-MIT for the addons; the platform core remains proprietary. See each module's
-manifest for its license.
+The entire project is licensed under the [Aetheris License v1.0](LICENSE): source-available, non-commercial, with attribution required. You may use, study, modify and share the code for your own purposes, but the core, the Aetheris name and the author's credit may not be removed, and the software may not be sold without written permission.

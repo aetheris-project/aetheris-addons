@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Aetheris modules and integrations: store, contracts, templates and accepted pull requests.",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "validate": "python tools/validate.py",

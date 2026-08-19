@@ -7,7 +7,7 @@
     "name": "Leonardo Galli",
     "github": "Leo-Galli"
   },
-  "license": "MIT",
+  "license": "Aetheris License v1.0",
   "entry": "src/index.ts",
   "requires": [],
   "description": "Post embeds with server events and billing alerts to Discord webhooks.",

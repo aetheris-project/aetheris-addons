@@ -18,7 +18,7 @@ VALID = {
     "category": "payment-gateway",
     "version": "1.0.0",
     "author": {"name": "Leonardo Galli", "github": "Leo-Galli"},
-    "license": "MIT",
+    "license": "Aetheris License v1.0",
     "entry": "src/index.ts",
     "requires": ["billing"],
     "description": "A test payment gateway.",
