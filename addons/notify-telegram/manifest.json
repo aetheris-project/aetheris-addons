@@ -1,0 +1,15 @@
+{
+  "id": "notify-telegram",
+  "name": "Telegram notifications",
+  "category": "notification",
+  "version": "1.0.0",
+  "author": {
+    "name": "Leonardo Galli",
+    "github": "Leo-Galli"
+  },
+  "license": "MIT",
+  "entry": "src/index.ts",
+  "requires": [],
+  "description": "Deliver platform alerts to a Telegram bot chat.",
+  "documentation": "README.md"
+}
