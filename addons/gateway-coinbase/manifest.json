@@ -1,0 +1,17 @@
+{
+  "id": "gateway-coinbase",
+  "name": "Coinbase Commerce",
+  "category": "payment-gateway",
+  "version": "1.0.0",
+  "author": {
+    "name": "Leonardo Galli",
+    "github": "Leo-Galli"
+  },
+  "license": "MIT",
+  "entry": "src/index.ts",
+  "requires": [
+    "billing"
+  ],
+  "description": "Accept crypto payments (BTC, ETH, USDC) through Coinbase Commerce.",
+  "documentation": "README.md"
+}
