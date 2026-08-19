@@ -14,6 +14,19 @@
       "license": "MIT",
       "description": "Accept crypto payments (BTC, ETH, USDC) through Coinbase Commerce.",
       "state": "accepted"
+    },
+    {
+      "id": "gateway-adyen",
+      "name": "Adyen",
+      "category": "payment-gateway",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "MIT",
+      "description": "Global payments platform with 250+ local payment methods.",
+      "state": "accepted"
     }
   ]
 }
