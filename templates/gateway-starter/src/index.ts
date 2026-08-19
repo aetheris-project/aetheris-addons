@@ -57,7 +57,7 @@ export class StarterGateway implements PaymentGateway {
     });
   }
 
-  async verifyWebhook(payload: string, signature: string): Promise<WebhookEvent> {
+  async verifyWebhook(payload: string, _signature: string): Promise<WebhookEvent> {
     // Validate the signature against your webhook secret, then parse.
     return JSON.parse(payload) as WebhookEvent;
   }

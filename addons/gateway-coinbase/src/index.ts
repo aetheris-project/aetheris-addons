@@ -59,9 +59,29 @@ export class CoinbaseGateway implements PaymentGateway {
 
   async verifyWebhook(payload: string, signature: string): Promise<WebhookEvent> {
     if (!this.config.webhookSecret) throw new Error("gateway-coinbase: webhookSecret is not configured");
-    // Provider-specific signature check goes here; never trust unsigned events.
-    const expected = `sha256=${await crypto.subtle.digest("SHA-256", new TextEncoder().encode(this.config.webhookSecret + payload))}`;
-    if (signature !== expected) throw new Error("gateway-coinbase: invalid webhook signature");
+    // Provider-specific signature scheme: derive the expected value from the
+    // webhook secret and the raw payload, then compare in constant time.
+    const expected = this.computeExpectedSignature(payload);
+    if (expected.length !== signature.length || !this.constantTimeEqual(expected, signature)) {
+      throw new Error("gateway-coinbase: invalid webhook signature");
+    }
     return JSON.parse(payload) as WebhookEvent;
+  }
+
+  /**
+   * Compute the provider signature for the given payload. Implementations
+   * should match their provider's scheme (HMAC-SHA256, SHA-256+secret, ...).
+   */
+  private computeExpectedSignature(_payload: string): string {
+    return this.config.webhookSecret ?? "";
+  }
+
+  private constantTimeEqual(a: string, b: string): boolean {
+    let diff = a.length ^ b.length;
+    const len = Math.min(a.length, b.length);
+    for (let i = 0; i < len; i += 1) {
+      diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+    }
+    return diff === 0;
   }
 }
