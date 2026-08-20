@@ -14,7 +14,7 @@ be merged.
     "name": "Leonardo Galli",
     "github": "Leo-Galli"
   },
-  "license": "Aetheris License v1.0",
+  "license": "AGPL-3.0",
   "entry": "src/index.ts",
   "requires": ["billing"],
   "description": "Accept crypto payments through Coinbase Commerce.",
@@ -31,7 +31,7 @@ be merged.
 | `category` | string | yes | one of `payment-gateway`, `notification`, `storage`, `utility`, `panel` |
 | `version` | string | yes | semantic version `MAJOR.MINOR.PATCH` |
 | `author` | object | yes | `{ "name": string, "github": string }` |
-| `license` | string | yes | License identifier (e.g. `Aetheris License v1.0`) |
+| `license` | string | yes | SPDX license identifier (e.g. `AGPL-3.0`) |
 | `entry` | string | yes | main entry relative to the module folder, must exist |
 | `requires` | array | no | platform features: `billing`, `vncConsole`, `pterodactyl`, `proxmox`, `virtfusion`, `registrars` |
 | `description` | string | yes | one-line description shown in the store |

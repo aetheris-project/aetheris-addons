@@ -7,7 +7,7 @@
     "name": "Leonardo Galli",
     "github": "Leo-Galli"
   },
-  "license": "Aetheris License v1.0",
+  "license": "AGPL-3.0",
   "entry": "src/index.ts",
   "requires": [],
   "description": "Fan out platform events to arbitrary HTTP endpoints with retries.",

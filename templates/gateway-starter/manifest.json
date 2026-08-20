@@ -7,7 +7,7 @@
     "name": "Your name",
     "github": "your-handle"
   },
-  "license": "Aetheris License v1.0",
+  "license": "AGPL-3.0",
   "entry": "src/index.ts",
   "requires": ["billing"],
   "description": "Copy-paste starting point for a new payment gateway.",

@@ -7,7 +7,7 @@
     "name": "Leonardo Galli",
     "github": "Leo-Galli"
   },
-  "license": "Aetheris License v1.0",
+  "license": "AGPL-3.0",
   "entry": "src/index.ts",
   "requires": [],
   "description": "Send billing, provisioning and alert messages to Slack channels.",

@@ -11,7 +11,7 @@
         "name": "Leonardo Galli",
         "github": "Leo-Galli"
       },
-      "license": "Aetheris License v1.0",
+      "license": "AGPL-3.0",
       "description": "Accept crypto payments (BTC, ETH, USDC) through Coinbase Commerce.",
       "state": "accepted",
       "pr": 1,
@@ -26,7 +26,7 @@
         "name": "Leonardo Galli",
         "github": "Leo-Galli"
       },
-      "license": "Aetheris License v1.0",
+      "license": "AGPL-3.0",
       "description": "Global payments platform with 250+ local payment methods.",
       "state": "accepted",
       "pr": 2,
@@ -41,7 +41,7 @@
         "name": "Leonardo Galli",
         "github": "Leo-Galli"
       },
-      "license": "Aetheris License v1.0",
+      "license": "AGPL-3.0",
       "description": "PayPal-owned gateway for cards, PayPal and venmo.",
       "state": "accepted",
       "pr": 3,
@@ -56,7 +56,7 @@
         "name": "Leonardo Galli",
         "github": "Leo-Galli"
       },
-      "license": "Aetheris License v1.0",
+      "license": "AGPL-3.0",
       "description": "Send billing, provisioning and alert messages to Slack channels.",
       "state": "accepted",
       "pr": 4,
@@ -71,7 +71,7 @@
         "name": "Leonardo Galli",
         "github": "Leo-Galli"
       },
-      "license": "Aetheris License v1.0",
+      "license": "AGPL-3.0",
       "description": "Deliver platform alerts to a Telegram bot chat.",
       "state": "accepted",
       "pr": 5,
@@ -86,7 +86,7 @@
         "name": "Leonardo Galli",
         "github": "Leo-Galli"
       },
-      "license": "Aetheris License v1.0",
+      "license": "AGPL-3.0",
       "description": "Post embeds with server events and billing alerts to Discord webhooks.",
       "state": "accepted",
       "pr": 6,
@@ -101,7 +101,7 @@
         "name": "Leonardo Galli",
         "github": "Leo-Galli"
       },
-      "license": "Aetheris License v1.0",
+      "license": "AGPL-3.0",
       "description": "Fan out platform events to arbitrary HTTP endpoints with retries.",
       "state": "accepted",
       "pr": 7,
