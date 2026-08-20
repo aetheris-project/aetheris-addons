@@ -18,7 +18,7 @@
 
 Aetheris Addons is the extension layer of the Aetheris platform. Beyond the
 theme system, anyone can ship **modules** (payment gateways, notification
-channels, storage drivers, utilities) that plug into the control plane through
+channels, storage drivers, utilities) that plug into the control panel through
 small, dependency-free TypeScript contracts.
 
 **Every entry in the [integration store](https://aetheris.enterprise/store) is

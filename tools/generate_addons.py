@@ -330,7 +330,7 @@ def readme_for(spec: dict) -> str:
 
 ## Usage
 
-The module is loaded by the Aetheris control plane from the manifest entry
+The module is loaded by the Aetheris control panel from the manifest entry
 point. See `types/index.ts` for the contract it implements.
 
 ## Failure modes
