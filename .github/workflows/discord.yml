@@ -37,6 +37,7 @@ jobs:
           BRANCH="${{ github.ref_name }}"
           TIMESTAMP="${{ github.event.head_commit.timestamp || github.event.pull_request.updated_at || github.event.release.published_at }}"
 
+          # Escape JSON special chars in commit message
           TITLE=$(echo "$TITLE" | sed 's/"/\\"/g; s/\/\\/g' | head -c 256)
 
           curl -s -X POST "$DISCORD_WEBHOOK" \
@@ -46,11 +47,6 @@ jobs:
                 \"title\": \"$TITLE\",
                 \"url\": \"$URL\",
                 \"color\": $COLOR,
-                \"author\": {
-                  \"name\": \"aetheris-addons\",
-                  \"url\": \"$AUTHOR_URL\",
-                  \"icon_url\": \"https://aetheris-web.vercel.app/logo.svg\"
-                },
                 \"fields\": [
                   {
                     \"name\": \"Repository\",
@@ -69,7 +65,8 @@ jobs:
                   }
                 ],
                 \"footer\": {
-                  \"text\": \"Aetheris Project\"
+                  \"text\": \"aetheris-addons | Aetheris Project\",
+                  \"icon_url\": \"https://aetheris-web.vercel.app/logo.svg\"
                 },
                 \"timestamp\": \"$TIMESTAMP\"
               }]
