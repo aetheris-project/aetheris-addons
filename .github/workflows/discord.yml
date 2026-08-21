@@ -66,7 +66,7 @@ jobs:
                 ],
                 \"footer\": {
                   \"text\": \"aetheris-addons | Aetheris Project\",
-                  \"icon_url\": \"https://aetheris-web.vercel.app/logo.svg\"
+                  \"icon_url\": \"https://raw.githubusercontent.com/aetheris-project/.github/main/assets/logo.svg\"
                 },
                 \"timestamp\": \"$TIMESTAMP\"
               }]
