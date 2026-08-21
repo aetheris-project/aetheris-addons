@@ -1,0 +1,54 @@
+name: Discord Notification
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+    types: [opened, synchronize, reopened]
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord notification
+        uses: Ilshidur/action-discord@0.3.2
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        with:
+          args: |
+            {
+              "embeds": [{
+                "title": "${{ github.event_name == 'push' && 'Push' || github.event_name == 'release' && 'Release' || 'Pull Request' }}: ${{ github.event.head_commit.message || github.event.pull_request.title || github.event.release.name || 'Update' }}",
+                "url": "${{ github.event.pull_request.html_url || github.event.head_commit.url || github.event.release.html_url }}",
+                "color": ${{ github.event_name == 'release' && 16750848 || github.event_name == 'push' && 65280 || 16750848 }},
+                "author": {
+                  "name": "aetheris-addons",
+                  "url": "https://github.com/${{ github.repository }}",
+                  "icon_url": "https://aetheris-web.vercel.app/logo.svg"
+                },
+                "fields": [
+                  {
+                    "name": "Repository",
+                    "value": "[aetheris-addons](https://github.com/${{ github.repository }})",
+                    "inline": true
+                  },
+                  {
+                    "name": "Branch",
+                    "value": "${{ github.ref_name }}",
+                    "inline": true
+                  },
+                  {
+                    "name": "Author",
+                    "value": "${{ github.actor }}",
+                    "inline": true
+                  }
+                ],
+                "footer": {
+                  "text": "Aetheris Project"
+                },
+                "timestamp": "${{ github.event.head_commit.timestamp || github.event.pull_request.updated_at || github.event.release.published_at }}"
+              }]
+            }
