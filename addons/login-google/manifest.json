@@ -1,0 +1,15 @@
+{
+  "id": "login-google",
+  "name": "Google sign-in",
+  "category": "authentication",
+  "version": "1.0.0",
+  "author": {
+    "name": "Leonardo Galli",
+    "github": "Leo-Galli"
+  },
+  "license": "AGPL-3.0",
+  "entry": "src/index.ts",
+  "requires": [],
+  "description": "Allow users to sign in with their Google account via OAuth 2.0. Configure Client ID and Client Secret in Admin Panel > Settings.",
+  "documentation": "README.md"
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-19",
+  "updatedAt": "2026-08-21",
   "addons": [
     {
       "id": "gateway-coinbase",
@@ -105,6 +105,51 @@
       "description": "Fan out platform events to arbitrary HTTP endpoints with retries.",
       "state": "accepted",
       "pr": 7,
+      "installations": 0
+    },
+    {
+      "id": "login-google",
+      "name": "Google sign-in",
+      "category": "authentication",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "AGPL-3.0",
+      "description": "Allow users to sign in with their Google account via OAuth 2.0. Configure Client ID and Client Secret in Admin Panel > Settings.",
+      "state": "accepted",
+      "pr": 8,
+      "installations": 0
+    },
+    {
+      "id": "login-apple",
+      "name": "Apple Sign-In",
+      "category": "authentication",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "AGPL-3.0",
+      "description": "Allow users to sign in with their Apple ID. Configure Team ID, Service ID, Key ID and private key in Admin Panel > Settings.",
+      "state": "accepted",
+      "pr": 9,
+      "installations": 0
+    },
+    {
+      "id": "login-discord",
+      "name": "Discord sign-in",
+      "category": "authentication",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leonardo Galli",
+        "github": "Leo-Galli"
+      },
+      "license": "AGPL-3.0",
+      "description": "Allow users to sign in with their Discord account via OAuth 2.0. Configure Application ID and Client Secret in Admin Panel > Settings.",
+      "state": "accepted",
+      "pr": 10,
       "installations": 0
     }
   ]
