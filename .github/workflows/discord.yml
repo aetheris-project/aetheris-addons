@@ -14,41 +14,63 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Discord notification
-        uses: Ilshidur/action-discord@0.3.2
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        with:
-          args: |
-            {
-              "embeds": [{
-                "title": "${{ github.event_name == 'push' && 'Push' || github.event_name == 'release' && 'Release' || 'Pull Request' }}: ${{ github.event.head_commit.message || github.event.pull_request.title || github.event.release.name || 'Update' }}",
-                "url": "${{ github.event.pull_request.html_url || github.event.head_commit.url || github.event.release.html_url }}",
-                "color": ${{ github.event_name == 'release' && 16750848 || github.event_name == 'push' && 65280 || 16750848 }},
-                "author": {
-                  "name": "aetheris-addons",
-                  "url": "https://github.com/${{ github.repository }}",
-                  "icon_url": "https://aetheris-web.vercel.app/logo.svg"
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            TITLE="Release: ${{ github.event.release.name }}"
+            URL="${{ github.event.release.html_url }}"
+            COLOR=16750848
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            TITLE="Pull Request: ${{ github.event.pull_request.title }}"
+            URL="${{ github.event.pull_request.html_url }}"
+            COLOR=16750848
+          else
+            TITLE="Push: ${{ github.event.head_commit.message }}"
+            URL="${{ github.event.head_commit.url }}"
+            COLOR=65280
+          fi
+
+          AUTHOR_URL="https://github.com/${{ github.repository }}"
+          COMMIT_URL="${{ github.event.head_commit.url }}"
+          AUTHOR="${{ github.actor }}"
+          BRANCH="${{ github.ref_name }}"
+          TIMESTAMP="${{ github.event.head_commit.timestamp || github.event.pull_request.updated_at || github.event.release.published_at }}"
+
+          TITLE=$(echo "$TITLE" | sed 's/"/\\"/g; s/\/\\/g' | head -c 256)
+
+          curl -s -X POST "$DISCORD_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"embeds\": [{
+                \"title\": \"$TITLE\",
+                \"url\": \"$URL\",
+                \"color\": $COLOR,
+                \"author\": {
+                  \"name\": \"aetheris-addons\",
+                  \"url\": \"$AUTHOR_URL\",
+                  \"icon_url\": \"https://aetheris-web.vercel.app/logo.svg\"
                 },
-                "fields": [
+                \"fields\": [
                   {
-                    "name": "Repository",
-                    "value": "[aetheris-addons](https://github.com/${{ github.repository }})",
-                    "inline": true
+                    \"name\": \"Repository\",
+                    \"value\": \"[aetheris-addons]($AUTHOR_URL)\",
+                    \"inline\": true
                   },
                   {
-                    "name": "Branch",
-                    "value": "${{ github.ref_name }}",
-                    "inline": true
+                    \"name\": \"Branch\",
+                    \"value\": \"$BRANCH\",
+                    \"inline\": true
                   },
                   {
-                    "name": "Author",
-                    "value": "${{ github.actor }}",
-                    "inline": true
+                    \"name\": \"Author\",
+                    \"value\": \"$AUTHOR\",
+                    \"inline\": true
                   }
                 ],
-                "footer": {
-                  "text": "Aetheris Project"
+                \"footer\": {
+                  \"text\": \"Aetheris Project\"
                 },
-                "timestamp": "${{ github.event.head_commit.timestamp || github.event.pull_request.updated_at || github.event.release.published_at }}"
+                \"timestamp\": \"$TIMESTAMP\"
               }]
-            }
+            }"
